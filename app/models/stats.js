@@ -11,6 +11,11 @@ class Stats {
     const [stat] = await db.query(sql, Number(unixTime));
     return stat;
   }
+  static async getFromInterval(startTime, endTime) {
+    const sql = 'select * From numberLocationCount where time  < ? and time  > ?';
+    const [stat] = await db.query(sql, Number(endTime), Number(startTime));
+    return stat;
+  }
 }
 
 module.exports = Stats;
