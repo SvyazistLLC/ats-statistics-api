@@ -12,8 +12,8 @@ class Stats {
     return stat;
   }
   static async getFromInterval(startTime, endTime) {
-    const sql = 'select * From numberLocationCount where time  < ? and time  > ?';
-    const [stat] = await db.query(sql, Number(endTime), Number(startTime));
+    const sql = 'select * From numberLocationCount where time  <= ? and time  >= ?';
+    const [stat] = await db.query(sql, [Number(endTime), Number(startTime)]);
     return stat;
   }
 }
