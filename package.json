@@ -43,7 +43,7 @@
     "mysql2": "^1.6.5",
     "pino": "^5.12.2",
     "uuid": "^3.3.2",
-    "validator": "^10.11.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.3",
